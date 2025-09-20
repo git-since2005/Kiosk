@@ -26,7 +26,7 @@ export default function CandidateListScreen({ navigation, route }) {
       candidate: candidate.name,
       user,
       party,
-      svgColor,
+      svgColor
     });
   };
 

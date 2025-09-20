@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ActivityIndicator, Alert } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function FaceVerificationScreen({ navigation, route }) {
-  //   const { qrData } = route.params;
+    const { qrData } = route.params;
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function FaceVerificationScreen({ navigation, route }) {
     // };
 
     // return () => ws.close();
-    navigation.navigate("CandidateList", { user: "Demo User" });
+    navigation.navigate("CandidateList", { user: qrData });
   }, []);
 
   return (
